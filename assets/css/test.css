@@ -1,0 +1,126 @@
+
+/* ************************* COMMENTS *********************** */
+
+.section-comments h1 {
+    color: white;
+}
+
+.section-comments {
+    margin-top: 250px;
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+}
+
+.comments-title {
+    font-size: 30px;
+    margin: 0 0 120px 20px;
+    color: black
+}
+
+.boxes-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.section-comments .box {
+    position: relative;
+    width: 275px;
+    height: 275px;
+    overflow: hidden;
+    margin-bottom: 100px;
+    margin-right: 5em;
+    margin-left: 5em;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.section-comments .box:hover {
+    z-index: 1;
+    transform: scale(1.15);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, .5);
+    border-radius: 0;
+}
+
+.section-comments .box .img-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.section-comments .box .img-box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(13, 19, 68, 0.53), #000);
+    mix-blend-mode: multiply;
+    opacity: 0;
+    transition: .5s;
+}
+
+.section-comments .box:hover .img-box:before {
+    opacity: 1;
+}
+
+.section-comments .box:hover~.box:not(:hover) {
+    filter: grayscale(2);
+}
+
+.section-comments .box .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-comments .box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+}
+
+.section-comments .box .content h2 {
+    color: #fff;
+    transition: .5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 20px;
+    transform: translateY(200px);
+}
+
+.section-comments .box:hover .content h2 {
+    transform: translateY(0);
+    transition-delay: .4s;
+}
+
+.section-comments .box .content p {
+    color: #fff;
+    transition: .5s;
+    font-size: 14px;
+    transform: translateY(200px);
+}
+
+.section-comments .box:hover .content p {
+    transform: translateY(0);
+    transition-delay: .5s;
+}
+
+
+/* ********************** END COMMENTS *********************** */

@@ -1,0 +1,142 @@
+/* Timeline */
+
+.timeline ul {
+    padding: 0px;
+}
+
+
+/* Line */
+
+.timeline ul li {
+    list-style-type: none;
+    position: relative;
+    width: 1px;
+    margin-left: 20px;
+    padding-top: 24px;
+    background: #ddd;
+}
+
+.timeline ul li.gradient-top {
+    background: -moz-linear-gradient(top, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30, 87, 153, 1)), color-stop(100%, rgba(125, 185, 232, 1)));
+    background: -webkit-linear-gradient(top, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
+    background: -o-linear-gradient(top, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
+    background: -ms-linear-gradient(top, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
+    background: linear-gradient(to bottom, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 50%, rgb(213, 213, 213) 100%, rgba(213, 213, 213, 0) 100%);
+}
+
+
+/* Bullets */
+
+.timeline ul li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 24px;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1.5px solid #009688;
+    background: #009688;
+}
+
+
+/* Description */
+
+.timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: calc(100vw - 76px);
+    margin: 0px 16px 0px 24px;
+}
+
+
+/* Effects */
+
+.timeline ul li::after {
+    transition: background .5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+    background: #009688;
+}
+
+.timeline ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+    transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) div {
+    transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Media queries */
+
+@media only screen and (min-width: 600px) {
+    .timeline ul li {
+        margin: 0 auto;
+    }
+    /* Description */
+    .timeline ul li div {
+        width: 250px;
+    }
+    .timeline ul li:nth-child(odd) div {
+        left: 0px;
+    }
+    .timeline ul li:nth-child(even) div {
+        left: -297px;
+        text-align: right;
+    }
+    .profile-lists {
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .banner {
+        height: 570px;
+        background-color: #fff;
+        /*
+background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url("design3.jpg");
+background-image: linear-gradient(180deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url("images/design3.jpg");
+*/
+        background-position: 0px 0px, 50% 50%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .timeline ul li {
+        margin: 0 auto;
+    }
+    .timeline ul li::after {
+        background: #fff;
+    }
+    /* Description */
+    .timeline ul li div {
+        width: 400px;
+    }
+    .timeline ul li:nth-child(odd) div {
+        left: 0px;
+    }
+    .timeline ul li:nth-child(even) div {
+        left: -447px;
+        text-align: right;
+    }
+    .skills-chart {
+        width: 80%;
+        padding-top: 24px;
+    }
+}
