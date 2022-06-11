@@ -349,6 +349,28 @@ aside.context .explanation {
     justify-content: center;
 }
 
+
+@media only screen and (max-width: 1000px) {
+    .periodic-table {
+        grid-template-columns: repeat(7, 100px);
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .periodic-table {
+        grid-template-columns: repeat(6, 100px);
+        grid-template-rows: repeat(6, 100px);
+    }
+
+@media only screen and (max-width: 700px) {
+    .periodic-table {
+        grid-template-columns: repeat(4, 90px);
+    }
+}
+
+
+
 .periodic-element {
     padding: 4px;
     position: relative;
