@@ -1,4 +1,9 @@
 /* Timeline */
+.timeline{
+    color: white!important;
+}
+
+
 
 .timeline ul {
     padding: 0px;

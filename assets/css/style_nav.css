@@ -58,7 +58,7 @@ img {
 
 .section__title {
     font-size: var(--h1-font-size);
-    color: var(--title-color);
+    color: #fff;
     text-align: center;
     margin-bottom: 1.5rem;
 }
