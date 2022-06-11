@@ -48,6 +48,7 @@ main{
 }
 
 .parallax-hero1 #hero1-text {
+    z-index: 999;
     font-weight: bold;
     color: white;
     justify-self: flex-start;
@@ -92,7 +93,6 @@ main{
 }
 
 .some-content {
-    padding: 1em;
     line-height: normal;
     background-color: black;
     color: white;
@@ -140,10 +140,11 @@ section {
 
 @media (max-width: 1024px) {
     .text-block {
-        top: 16vh;
+        top: 0;
         height: auto;
+        font-size: 20px;
         left: 20vw;
-        z-index: 9;
+        z-index: 999;
     }
 }
 
