@@ -362,10 +362,19 @@ aside.context .explanation {
         grid-template-columns: repeat(6, 100px);
         grid-template-rows: repeat(6, 100px);
     }
+}
 
 @media only screen and (max-width: 700px) {
     .periodic-table {
         grid-template-columns: repeat(4, 90px);
+        grid-template-rows: repeat(6, 90px);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .periodic-table {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(9, 80px);
     }
 }
 
